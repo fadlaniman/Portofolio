@@ -6,13 +6,15 @@ import Icons from "./Fragments/icons";
 import Picture from "./Fragments/picture";
 import Section from "./section";
 import Content from "./Fragments/content";
+import { useGlobalState } from "./Fragments/brand";
 
 function App() {
+  const [darkMode] = useGlobalState("darkMode");
   return (
     <>
-      <div>
+      <div className={darkMode ? "bg-gray-950 text-white" : ""}>
         <nav>
-          <Navbar/>
+          <Navbar />
         </nav>
         <main>
           <section>
@@ -24,7 +26,8 @@ function App() {
           </section>
           <section>
             <Section>
-              <Content/>
+              <Content.First />
+              <Content.Second />
             </Section>
           </section>
         </main>

@@ -1,44 +1,55 @@
 import * as React from "react";
 import Card from "./card";
-import Project from "./project";
 
-const Materi = [
-  {
-    id: 1,
-    header: "Service | Offer",
-    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est autem quo
-  ducimus in rem similique tempora tempore itaque provident, quia optio,
-  odit eum praesentium explicabo laudantium, suscipit saepe eveniet
-  doloribus.`,
-    footer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    example: <Card/>,
-  },
+const Content = () => {};
 
-  {
-    id: 2,
-    header: "Portofolio",
-    description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est autem quo
-  ducimus in rem similique tempora tempore itaque provident, quia optio,
-  odit eum praesentium explicabo laudantium, suscipit saepe eveniet
-  doloribus.`,
-    footer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    example: <Project/>,
-  },
-];
-
-const Content = () => {
+const First = () => {
   return (
-    <div>
-      {Materi.map((materi) => (
-        <div className="py-7 space-y-3">
-          <h1 className="font-medium text-xl xl:text-3xl">{materi.header}</h1>
-          <h2 className="text-justify xl:text-lg">{materi.description}</h2>
-          <p className="text-justify text-gray-500 xl:text-lg pb-7">{materi.footer}</p>
-          {materi.example}
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="py-7 space-y-3">
+        <h1 className="font-medium text-xl">Service | Offer</h1>
+        <h2 className="text-justify">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti,
+          maiores. Magni aliquid laboriosam dicta. Consequuntur cumque
+          consequatur id beatae, nemo, magnam architecto repudiandae ea,
+          exercitationem molestiae dolores maiores quod quas!
+        </h2>
+        <p className="text-justify text-gray-500 pb-7">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </p>
+        <Card />
+      </div>
+    </>
   );
 };
 
+const Second = () => {
+  return (
+    <>
+      <div className="py-7 space-y-3">
+        <h1 className="font-medium text-xl">Portofolio</h1>
+        <h2 className="text-justify">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti,
+          maiores. Magni aliquid laboriosam dicta. Consequuntur cumque
+          consequatur id beatae, nemo, magnam architecto repudiandae ea,
+          exercitationem molestiae dolores maiores quod quas!
+        </h2>
+        <p className="text-justify text-gray-500 pb-7">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </p>
+        <div className="grid lg:grid-cols-2 2xl:grid-cols-3 gap-3">
+          <img src="/public/images/example.jpg" alt="" />
+          <img src="/public/images/example.jpg" alt="" />
+          <img src="/public/images/example.jpg" alt="" />
+          <img src="/public/images/example.jpg" alt="" />
+          <img src="/public/images/example.jpg" alt="" />
+          <img src="/public/images/example.jpg" alt="" />
+        </div>
+      </div>
+    </>
+  );
+};
+
+Content.First = First;
+Content.Second = Second;
 export default Content;
