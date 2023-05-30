@@ -1,5 +1,6 @@
 import * as React from "react";
 import Card from "./card";
+import { Link } from "react-router-dom";
 
 const Content = () => {};
 
@@ -38,12 +39,22 @@ const Second = () => {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit.
         </p>
         <div className="grid lg:grid-cols-2 2xl:grid-cols-3 gap-3">
-          <img src="/public/images/example.jpg" alt="" />
-          <img src="/public/images/example.jpg" alt="" />
-          <img src="/public/images/example.jpg" alt="" />
-          <img src="/public/images/example.jpg" alt="" />
-          <img src="/public/images/example.jpg" alt="" />
-          <img src="/public/images/example.jpg" alt="" />
+          <div className="grid space-y-5">
+            <h3 className="text-sm font-bold text-blue-900">
+              Sistem Informasi Sekolah berbasis Website
+            </h3>
+            <img
+              className="shadow-md shadow-gray-700"
+              src="/static/images/project-1(destkop).png"
+              alt=""
+            />
+            <Link
+              className=" text-white w-max mx-auto py-1 px-3 italic text-sm rounded-sm bg-blue-900"
+              to="https://web-aplikasi-sekolah-6gb2s0n29-fadlaniman.vercel.app/"
+            >
+              View
+            </Link>
+          </div>
         </div>
       </div>
     </>
